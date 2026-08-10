@@ -7,13 +7,14 @@
     <title>SZE — Game UX & Art Direction</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="grain" aria-hidden="true"></div>
     <header class="site-header">
-      <a class="wordmark" href="#top">SZE</a>
+      <a class="wordmark" href="#top"><span>SZE</span></a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a>
@@ -21,13 +22,15 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero ambient" id="top">
-        <div class="hero-intro reveal"><span>SZE</span><span>Game UX · Art Direction · Toronto</span></div>
+        <div class="hero-intro reveal"><span>OUPELAYE STUDIO PRESENTS</span><span>GAME UX · ART DIRECTION · TORONTO</span></div>
         <div class="hero-copy reveal">
-          <h1>I make games that feel <em>good to figure out.</em></h1>
-          <p>Game UX, art direction, and playful systems—built with small teams and shaped through play.</p>
+          <div class="fun-badge">FUN<br /><small>GUARANTEED</small></div>
+          <h1>Serious about<br /><em>games.</em></h1>
+          <p>I make strange, charming games with clear interactions, juicy feedback, and worlds you want to poke at.</p>
         </div>
+        <div class="hero-character reveal" aria-hidden="true"><span class="character-spark spark-one">✦</span><span class="character-spark spark-two">✦</span><img src="assets/oupelaye-mascot.png" alt="" /></div>
         <div class="hero-footer reveal">
           <a class="circle-link" href="#games"><span>Selected<br />games</span><b>↓</b></a>
           <p>PLAYFUL SYSTEMS · CLEAR FEEDBACK · STRONG WORLDS</p>
@@ -36,21 +39,21 @@
       </section>
 
       <section class="manifesto reveal">
-        <p>The best game ideas become memorable when players can <strong>read the rules, feel the feedback,</strong> and find their own rhythm.</p>
-        <span>✦</span>
+        <p>Small studio energy. <strong>Big silly ideas.</strong> Games designed to click fast and stick around.</p>
+        <img src="assets/oupelaye-logo.png" alt="Oupelaye Studio" />
       </section>
 
       <section class="games-section" id="games">
         <div class="section-heading reveal"><span>(01)</span><h2>Selected games</h2><p>Original concepts, game-jam builds, and experiments in progress.</p></div>
         <div class="games-grid">
           <article class="game-card reveal">
-            <a class="game-art" href="mad-john.html"><img src="assets/mad-john-gameplay.jpg" alt="Mad John card and puzzle gameplay" /></a>
-            <div class="game-meta"><span>01 / IN DEVELOPMENT</span><span>CARD + PUZZLE</span></div>
+            <a class="game-art" href="mad-john.html" aria-label="Read the Mad John case study"><img src="assets/mad-john-gameplay.jpg" alt="Mad John card and puzzle gameplay" /></a>
+            <div class="game-meta"><span>01 / FRESHLY SQUEEZED</span><span>CARD + PUZZLE</span></div>
             <div class="game-title"><h3>Mad John</h3><p>An original card-and-puzzle game made learnable through hands-on playtesting.</p><a href="mad-john.html">View case study ↗</a></div>
           </article>
           <article class="game-card reveal">
-            <a class="game-art" href="toadally-in-love.html"><img src="assets/toadally-title.png" alt="Toadally In Love title screen" /></a>
-            <div class="game-meta"><span>02 / GAME JAM</span><span>GRID PUZZLE</span></div>
+            <a class="game-art" href="toadally-in-love.html" aria-label="Read the Toadally In Love case study"><img src="assets/toadally-title.png" alt="Toadally In Love title screen" /></a>
+            <div class="game-meta"><span>02 / JAM FLAVOUR</span><span>GRID PUZZLE</span></div>
             <div class="game-title"><h3>Toadally In Love</h3><p>A four-day puzzle game ranked third overall among 73 entries.</p><a href="toadally-in-love.html">View case study ↗</a></div>
           </article>
         </div>
@@ -58,8 +61,8 @@
       </section>
 
       <section class="about-section ambient" id="about">
-        <div class="about-stamp reveal">PLAYER ONE<br />MEETS<br />DESIGNER <span>✦</span></div>
-        <div class="about-copy reveal"><span class="eyebrow">(02) About</span><h2>I turn unusual mechanics into <em>clear moments of play.</em></h2><p>I’m a product designer and co-founder of Oupelaye Studio. In games, I work across concepting, game UX, interaction design, art direction, and playtesting—usually in close collaboration with a developer.</p><p>I care about the moment a player understands the hook: the interface disappears, the system clicks, and curiosity takes over.</p></div>
+        <div class="about-stamp reveal"><img src="assets/oupelaye-can.png" alt="Oupelaye Studio orange soda can" /></div>
+        <div class="about-copy reveal"><span class="eyebrow">(02) Meet the studio</span><h2>We make games with <em>flavour.</em></h2><p>I’m SZE, a product designer and co-founder of Oupelaye Studio. I work across game concepts, UX, interaction design, art direction, and playtesting—usually in close collaboration with a developer.</p><p>I care about the moment a player understands the hook: the interface disappears, the system clicks, and curiosity takes over.</p></div>
         <div class="skills reveal"><span class="eyebrow">What I bring</span><ul><li><b>01</b>Game UX & onboarding</li><li><b>02</b>Art direction</li><li><b>03</b>Interaction feedback</li><li><b>04</b>Playtest-led iteration</li></ul></div>
       </section>
 
@@ -70,11 +73,12 @@
 
       <section class="contact-section ambient" id="contact">
         <div class="contact-top reveal"><span class="eyebrow">(04) Get in touch</span><p>Have a game, team, or odd little idea?</p></div>
-        <h2 class="reveal">Let’s make something<br /><a href="mailto:hayliewsw@gmail.com">worth playing <span>↗</span></a></h2>
+        <img class="contact-logo reveal" src="assets/oupelaye-logo.png" alt="Oupelaye Studio" />
+        <h2 class="reveal">Got a weird idea?<br /><a href="mailto:hayliewsw@gmail.com">Let’s play <span>↗</span></a></h2>
         <footer><span>© 2026 SZE</span><div><a href="mailto:hayliewsw@gmail.com">Email</a><a href="https://www.linkedin.com/in/hayliewsw/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://szzzeler.itch.io" target="_blank" rel="noreferrer">itch.io</a></div><span>Made in Toronto</span></footer>
       </section>
     </main>
     <nav class="bottom-nav" aria-label="Page navigation"><a class="bottom-nav-wordmark" href="#top">SZE</a><a href="#top" data-nav="top">Home</a><a href="#games" data-nav="games">Games</a><a href="#about" data-nav="about">About</a><a href="#contact" data-nav="contact">Contact</a></nav>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260810-ux"></script>
   </body>
 </html>

@@ -4,33 +4,6 @@ favicon.type = 'image/svg+xml';
 favicon.href = 'favicon.svg';
 document.head.append(favicon);
 
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-const gamePages = new Set([
-  'games.html',
-  'mad-john.html',
-  'toadally-in-love.html',
-  'become-the-weapon.html',
-  'suko-wednesday.html',
-  'w4vvv3.html',
-]);
-const activePortfolio = gamePages.has(currentPage) ? 'games' : 'product';
-const portfolioSwitcher = document.createElement('nav');
-portfolioSwitcher.className = 'portfolio-switcher';
-portfolioSwitcher.setAttribute('aria-label', 'Portfolio sections');
-portfolioSwitcher.innerHTML = `
-  <a href="index.html" ${activePortfolio === 'product' ? 'class="active" aria-current="page"' : ''}>Product Design</a>
-  <a href="games.html" ${activePortfolio === 'games' ? 'class="active" aria-current="page"' : ''}>Games</a>
-`;
-
-const siteHeader = document.querySelector('.site-header');
-const usesBottomNavigation = document.querySelector('.bottom-nav');
-if (siteHeader && !usesBottomNavigation) {
-  siteHeader.querySelector('.wordmark')?.insertAdjacentElement('afterend', portfolioSwitcher);
-} else {
-  portfolioSwitcher.classList.add('portfolio-switcher-floating');
-  document.body.prepend(portfolioSwitcher);
-}
-
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.main-nav');
 
@@ -214,13 +187,16 @@ document.querySelectorAll('.entry-date').forEach((date) => {
 
 if (document.body.classList.contains('resume-page')) {
   document.body.insertAdjacentHTML('beforeend', `
-    <nav class="bottom-nav resume-bottom-nav" aria-label="Page navigation">
-      <a class="bottom-nav-wordmark" href="index.html#top" aria-label="Haylie Wong home">HAYLIE <span>WONG</span></a>
-      <a href="index.html#top">Home</a>
-      <a href="index.html#work">Projects</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
-      <a class="bottom-nav-resume active" href="resume.html" aria-current="page">Resume ↗</a>
+    <nav class="bottom-nav resume-bottom-nav" aria-label="Portfolio navigation">
+      <span class="portfolio-mode-switch" aria-label="Choose portfolio">
+        <a class="portfolio-destination" href="index.html#top">Product Design</a>
+        <a class="portfolio-destination" href="games.html#top">Games</a>
+      </span>
+      <span class="utility-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="bottom-nav-resume active" href="resume.html" aria-current="page">Résumé ↗</a>
+      </span>
     </nav>
   `);
 }
